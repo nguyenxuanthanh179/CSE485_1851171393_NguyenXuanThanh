@@ -1,0 +1,35 @@
+.auth-content{
+    width: 30%;
+    margin: 150px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+.auth-content .form-title{
+    text-align: center;
+}
+
+.auth-content form div{
+    margin-bottom: 10px;
+}
+
+.auth-content form p{
+    text-align: center;
+}
+
+.auth-content form p a{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1120px){
+    .auth-content{
+        width: 50%;
+        margin: 150px auto;
+    }
+}
+@media only screen and (max-width: 480px){
+    .auth-content{
+        width: 100%;
+        margin: 70px 0 0px;
+    }
+}
