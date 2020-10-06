@@ -1,0 +1,9 @@
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+}
+.form-control{
+    width: 300px !important;
+}
