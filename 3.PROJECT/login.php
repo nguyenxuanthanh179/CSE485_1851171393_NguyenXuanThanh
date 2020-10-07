@@ -16,7 +16,9 @@
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
-						<img src="images/tải xuống.png" class="brand_logo" alt="Logo">
+						<a href="index.php">
+                            <img src="images/tải xuống.png" class="brand_logo" alt="Logo">
+                        </a>
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">

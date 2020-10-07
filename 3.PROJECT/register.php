@@ -17,7 +17,9 @@
 			<div class="user_card " style=" width: 450px; height:650px;">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
-						<img src="images/tải xuống.png" class="brand_logo" alt="Logo">
+						<a href="index.php">
+                            <img src="images/tải xuống.png" class="brand_logo" alt="Logo">
+                        </a>
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
@@ -72,7 +74,7 @@
                             <button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
                         </div>
                         <div class="login-register">
-                            <a href="login.html">Login</a>
+                            <a href="login.php">Login</a>
                         </div>
                     </form>
 			</div>
