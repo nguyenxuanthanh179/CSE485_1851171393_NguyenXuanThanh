@@ -1,117 +1,181 @@
 <?php
     include('header.php');
 ?>
-    <main class="container">
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                <img src="http://cse.tlu.edu.vn/Portals/0/Banner/k54-tot-nghiep.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </div>
-                </div>
-                <div class="carousel-item">
-                <img src="http://cse.tlu.edu.vn/Portals/0/Banners/cntt-fsoft-ky.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                </div>
-                <div class="carousel-item">
-                <img src="http://cse.tlu.edu.vn/Portals/0/Banner/khai-truong.JPG" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </div>
-                </div>
-                <div class="carousel-item">
-                <img src="http://cse.tlu.edu.vn/Portals/0/Banner/hoi-thao.JPG" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </div>
-                </div>
-                <div class="carousel-item">
-                <img src="http://cse.tlu.edu.vn/Portals/0/Banner/sanh-t54.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </div>
-                </div>
-                <div class="carousel-item">
-                <img src="http://cse.tlu.edu.vn/Portals/0/Banners/hop-tac.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </div>
-                </div>
+
+         <!-- start banner -->
+         <div class="banner">
+            <div class="banner__text">
+               <input type="text" class="search" name="search" id="" placeholder="Tìm kiếm">
+               <button class="search"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-        <section class="content-section bg-primary text-white text-center" id="services">
-            <div class="container">
-            <div class="content-section-heading">
-                <h3 class="text-secondary mb-0">Services</h3>
-                <h2 class="mb-5">What We Offer</h2>
+        <!-- start married -->
+        <div class="married container">
+            <div class="row" style="display: flex;
+    justify-content: center;
+    padding-bottom: 50px;">
+                <h2>Giới thiệu</h2>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                <span class="service-icon rounded-circle mx-auto mb-3">
-                    <i class="icon-screen-smartphone"></i>
-                </span>
-                <h4>
-                    <strong>Responsive</strong>
-                </h4>
-                <p class="text-faded mb-0">Looks great on any screen size!</p>
+            <div class="row" >
+
+                <div class="col-lg-6 col-md-12">
+                    <iframe width="520" height="335" src="https://www.youtube.com/embed/pv3DAYZzLGE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                <span class="service-icon rounded-circle mx-auto mb-3">
-                    <i class="icon-pencil"></i>
-                </span>
-                <h4>
-                    <strong>Redesigned</strong>
-                </h4>
-                <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                <span class="service-icon rounded-circle mx-auto mb-3">
-                    <i class="icon-like"></i>
-                </span>
-                <h4>
-                    <strong>Favorited</strong>
-                </h4>
-                <p class="text-faded mb-0">Millions of users
-                    <i class="fas fa-heart"></i>
-                    Start Bootstrap!</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                <span class="service-icon rounded-circle mx-auto mb-3">
-                    <i class="icon-mustache"></i>
-                </span>
-                <h4>
-                    <strong>Question</strong>
-                </h4>
-                <p class="text-faded mb-0">I mustache you a question...</p>
+                <div class="col-lg-6 col-md-12">
+                   <div style="margin-left:20px">
+                        <p style=" font-size: 30px">Công Nghệ Thông Tin- Đại Học Thủy Lợi</p>
+                        <p style="font-size: 18px">Khoa có những thay đổi lớn trong thời gian qua về quy mô, chương trình đào tạo có tầm nhìn và đáp ứng yêu cầu thị trường việc làm trong và ngoài nước. Hiện Khoa có 3 ngành đào tạo bậc đại học là Công nghệ thông tin, Hệ thống thông tin, Kỹ thuật phần mềm; một chuyên ngành bậc sau đại học là Công nghệ thông tin. Khoa luôn cập nhật sách và giáo trình mới nhất, đang được nhiều trường đại học uy tín trên thế giới sử dụng, các bài giảng đều cung cấp trực tuyến cho sinh viên. Các chương trình do công ty Samsung toàn cầu, FPT software đầu tư giúp Khoa đào tạo những sinh viên khá có cơ hội việc làm khi còn chưa tốt nghiệp.</p>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class="page-wrapper">
+
+        <!-- post-slider -->
+            <div class="post-slider">
+                <h2 class="slider-title">Tin tức & Thông báo</h2>
+                <i class="fas fa-chevron-left prev "></i>
+                <i class="fas fa-chevron-right next"></i>
+                <div class="post-wrapper">
+                    <div class="post">
+                        <img class="slider-image" src="http://cse.tlu.edu.vn/Portals/0/2016/cnpm.jpg" alt="">
+                        <div class="post-info">
+                            <h4><a href="single.html">Chuyên ngành kỹ Thuật Phần Mềm - Đại Học Thủy Lợi</a></h4>
+                            <i class="far fa-user">CNTT-DHTL</i>
+                            &nbsp;
+                            <i class="far fa-calendar">Oct 10, 2020</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img class="slider-image" src="http://cse.tlu.edu.vn/Portals/0/2016/httt.jpg" alt="">
+                        <div class="post-info">
+                            <h4><a href="single.html">Chuyên ngành Hệ Thống Thông Tin - Đại Học Thủy Lợi</a></h4>
+                            <i class="far fa-user">CNTT-DHTL</i>
+                            &nbsp;
+                            <i class="far fa-calendar">Oct 10, 2020</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img class="slider-image" src="http://cse.tlu.edu.vn/Portals/0/2016/cntt.jpg" alt="">
+                        <div class="post-info">
+                            <h4><a href="single.html">Chuyên ngành Công Nghệ Thông Tin - Đại Học Thủy Lợi</a></h4>
+                            <i class="far fa-user">CNTT-DHTL</i>
+                            &nbsp;
+                            <i class="far fa-calendar">Oct 10, 2020</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img class="slider-image" src="http://www.tlu.edu.vn/Portals/0/2018/Thang11/TH_2.jpg" alt="">
+                        <div class="post-info">
+                            <h4><a href="#">Đội tuyển Olympic Tin học toàn quốc ra quân</a></h4>
+                            <i class="far fa-user">CNTT-DHTL</i>
+                            &nbsp;
+                            <i class="far fa-calendar">Oct 10, 2020</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img class="slider-image" src="http://www.tlu.edu.vn/Portals/0/2018/Thang11/3_2.jpg" alt="">
+                        <div class="post-info">
+                            <h4><a href="#">Sinh viên K60 đạt giải tại Olympic Tin học toàn quốc</a></h4>
+                            <i class="far fa-user">CNTT-DHTL</i>
+                            &nbsp;
+                            <i class="far fa-calendar">Oct 10, 2020</i>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </section>
-    </main>
+        </div>
+        <div class="parent">
+            <div style="display: flex;justify-content: center;padding-top: 100px">
+                <h2>Đội Ngũ Giảng Viên</h2>      
+            </div>
+            <div  style="display: flex; justify-content: center;padding-bottom: 50px;">
+                Khoa Công nghệ thông tin- Đại Học Thủy Lợi
+            </div>
+            <div class="frend__img container">
+                <div class="row">
+                    
+                     <div class="col-lg-3 col-md-6 col-12">
+                        <div class="frend__text">
+                            <img src="http://cse.tlu.edu.vn/Portals/0/Images/2016/Tung%20VIASM.jpg" height="200px" width="200px" alt="">
+                            <h1>Nguyễn Thanh Tùng (PGS. TS.)</h1>
+                             <p>   Trưởng khoa <br>
+                                BM Tin học và Kỹ thuật tính toán, Khoa CNTT
+                            </p>
+                        </div>
+                    </div>
+                     <div class="col-lg-3 col-md-6 col-12">
+                        <div class="frend__text">
+                            <img src="http://cse.tlu.edu.vn/Portals/0/Users/nguyen%20manh%20hien%201.jpg" height="200px" width="200px" alt="">
+                            <h1>Nguyễn Mạnh Hiển (TS.)</h1>
+                            <p>Giảng viên <br>
+                            Bộ môn Khoa học máy tính, Khoa CNTT</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="frend__text">
+                            <img src="http://cse.tlu.edu.vn/Portals/0/2016/Kieu%20Tuan%20Dung.jpg" height="200px" width="200px" alt="">
+                            <h1>Kiều Tuấn Dũng <br>
+                            (ThS.)</h1>
+                            <p>Giảng viên <br>
+                            Bộ môn Hệ thống thông tin, Khoa CNTT</p>
+                        </div>
+                    </div>
+                   
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="frend__text">
+                            <img src="http://cse.tlu.edu.vn/Portals/0/Copy%20of%20Dang%20Thu%20Hien.jpg" height="200px" width="200px"  alt="">
+                            <h1>Đặng Thị Thu Hiền <br>
+                            (TS.)</h1>
+                            <p>Phó trưởng khoa kiêm trưởng bộ môn <br>
+                                BM Hệ thống thông tin, Khoa CNTT
+                    </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="frend__text">
+                            <img src="http://cse.tlu.edu.vn/Portals/0/Users/%e1%ba%a3nh%20th%e1%ba%bb.png" height="200px" width="200px" alt="">
+                            <h1>Nguyễn Quỳnh Diệp (TS.)</h1>
+                            <p>Trưởng bộ môn <br>
+                            Bộ môn Tin học và Kỹ thuật tính toán, Khoa CNTT<p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="frend__text">
+                            <img src="http://cse.tlu.edu.vn/Portals/0/Users/ngvannam.jpg" height="200px" width="200px" alt="">
+                            <h1>Nguyễn Văn Nam (ThS.)</h1>
+                            <p>Giảng viên <br>
+                            BM Hệ thống thông tin, Khoa CNTT</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="frend__text">
+                            <img src="http://cse.tlu.edu.vn/Portals/0/Images/Thanh.png" height="200px" width="200px"  alt="">
+                            <h1>Lê Nguyễn Tuấn Thành (TS.)</h1>
+                            <p>Giảng viên <br>
+                            BM Công nghệ phần mềm, Khoa CNTT</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="frend__text">
+                            <img src="http://cse.tlu.edu.vn/Portals/0/anh-ngan.JPG" height="200px" width="200px"  alt="">
+                            <h1>Trần Thị Ngân <br>
+                            (TS.)</h1>
+                            <p>Giảng viên <br>
+                            BM Công nghệ phần mềm, Khoa CNTT</p>
+                                                
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="xemthem">
+                  <button class="read_mode"> Xem Thêm</button>
+            </div>
+        </div>
+        <!-- start attending -->
 <?php
     include('footer.php');
 ?>

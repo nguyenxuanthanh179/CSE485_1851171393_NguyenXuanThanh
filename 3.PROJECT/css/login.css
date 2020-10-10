@@ -1,9 +1,12 @@
-    body,
-    html {
+    body{
         margin: 0;
         padding: 0;
         height: 100%;
-        background: #60a3bc !important;
+        background: #74bad648 !important;
+        
+    }
+    .margin-top{
+        margin-top: 200px;
     }
     .user_card {
         height: 400px;
@@ -28,7 +31,7 @@
         width: 170px;
         top: -75px;
         border-radius: 50%;
-        background: #60a3bc;
+        background: #74bbd666 !important;
         padding: 10px;
         text-align: center;
     }

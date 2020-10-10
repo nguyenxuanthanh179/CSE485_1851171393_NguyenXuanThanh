@@ -13,7 +13,7 @@
 <!--Coded with love by Mutiullah Samim-->
 <body>
 	<div class="container h-100">
-		<div class="d-flex justify-content-center h-100">
+		<div class="d-flex justify-content-center h-100" style="margin-top:200px;">
 			<div class="user_card " style=" width: 450px; height:650px;">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
@@ -23,23 +23,14 @@
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
-					<form class="form-horizontal" method="post" action="#">
+					<form class="form-horizontal" method="post" action="process-register.php">
 
                         <div class="form-group">
                             <label for="name" class="cols-sm-2 control-label">Your Name</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon icons"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="cols-sm-2 control-label">Your Email</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon icons"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" />
+                                    <input type="text" class="form-control" name="yourname" id="name" placeholder="Enter your Name" />
                                 </div>
                             </div>
                         </div>
@@ -53,11 +44,21 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon icons"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" />
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="form-group">
                             <label for="password" class="cols-sm-2 control-label">Password</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon icons"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                    <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" />
+                                    <input type="password" class="form-control" name="password1" id="password" placeholder="Enter your Password" />
                                 </div>
                             </div>
                         </div>
@@ -66,12 +67,12 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon icons"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                    <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password" />
+                                    <input type="password" class="form-control" name="password2" id="password2" placeholder="Confirm your Password" />
                                 </div>
                             </div>
                         </div>
                         <div class="form-group ">
-                            <button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                            <input type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Register">
                         </div>
                         <div class="login-register">
                             <a href="login.php">Login</a>

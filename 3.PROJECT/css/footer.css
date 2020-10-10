@@ -1,0 +1,16 @@
+/* footer */
+ul{
+	list-style: none;
+}
+footer{
+    background: rgb(245,239,239);
+background: linear-gradient(173deg, rgba(245,239,239,1) 0%, rgba(208,218,221,0.6951155462184874) 28%, rgba(19,69,138,1) 100%);
+}
+.bg-footer{
+	height: 50px;
+    background: rgb(97,117,126);
+    background: linear-gradient(180deg, rgba(97,117,126,0.6362920168067228) 0%, rgba(55,86,96,0.9051995798319328) 44%, rgba(57,83,97,1) 100%);
+}
+.padding{
+    padding: 50px 30px 50px 170px
+}
