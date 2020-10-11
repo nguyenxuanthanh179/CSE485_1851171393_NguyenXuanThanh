@@ -6,7 +6,7 @@
 
 body {
     font-size: 62.5%;
-    /* background-color: rgba(89, 154, 173, 0.781) !important; */
+    background: #74bad648 !important;
 }
 
 .wrapper {
@@ -28,78 +28,6 @@ li {
 }
 
 
-/* =========start header======== */
-
-
-.header {
-    display: flex;
-    align-items: center;
-    height: 11vh;
-    width: 100%;
-    z-index: 999;
-    position: fixed;
-    background: rgb(255,255,255);
-background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 46%, rgba(13,142,186,0.7819502801120448) 100%);
-}
-
-.header .header__menu {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 120px;
-}
-
-.hover a {
-    color: #000;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 10px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.header .header__menu .temp {
-    display: flex;
-    justify-content: flex-end;
-    margin-left: -10px;
-}
-
-.cardd {
-    position: absolute;
-    background-color: aliceblue;
-    display: none;
-    top: 100%;
-    transform: translateY(30%);
-    font-family: 'Cardo', serif;
-}
-
-.cardd li {
-    padding: 15px 75px 15px 25px;
-    font-size: 15px;
-    background-color: rgb(255, 255, 255);
-    cursor: pointer;
-}
-
-.hover:hover .cardd {
-    display: block;
-    animation: run 0.3s;
-    transition: 0.5s;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.line {
-    margin: 2px;
-    width: 22px;
-    height: 3px;
-    background-color: white;
-}
-
-.humbeger {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-}
 
 
 /* =========start banner==== */
@@ -282,171 +210,18 @@ button.search:hover{
 .xemthem{
     display: flex;
     justify-content:center;
-
 }
-.read_mode{
-    text-align: center;
+
+.xemthem .read_mode{
     border:1px solid #ccc;
     padding: 12px 40px;
     border-radius: 25px;
+    background-color: #b3c3d3;
 }
 .read_mode:hover{
     background-color: rgb(67, 99, 134);
 }
-@media (min-width: 768px) {
-    @keyframes run {
-        0% {
-            opacity: 0.5;
-            transform: translateY(30%);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    .humbeger {
-        display: none;
-    }
-    .event .overlay {
-        position: absolute;
-        top: 83%;
-        left: 48%;
-    }
-}
 
-@media (max-width: 991px) {
-    .event .overlay {
-        position: absolute;
-        top: 93%;
-        left: 48%;
-    }
-    .time .time__last {
-        padding: 3rem 5rem 0;
-    }
-    .header .header__menu {
-        padding: 30px 60px;
-    }
-}
-
-@media (max-width: 767px) {
-    .header {
-        height: 14vh;
-    }
-    .header__logo {
-        position: absolute;
-        left: 0;
-        margin-bottom: 10px;
-    }
-    .humbeger {
-        display: block;
-        background: #612D7F;
-        padding: 5px;
-        border-radius: 5px;
-    }
-    .temp {
-        transition: 1s;
-        max-height: 0vh;
-        overflow: hidden;
-        flex-direction: column;
-        align-items: flex-start;
-        position: absolute;
-        top: 100%;
-        left: 10px;
-        background-color: aliceblue;
-        width: 100%;
-        font-size: 11px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    input.search{
-        width: 250px !important;
-        height: 30px !important;
-    }
-    button.search{
-        width: 30px !important;
-        height: 30px !important;
-    }
-    .showMenu {
-        max-height: 100vh;
-    }
-    .cardd {
-        position: relative;
-    }
-    .temp a {
-        width: 100%;
-        color: #6c6a6a;
-        border-bottom: 1px solid rgb(204, 199, 199);
-    }
-    .header .header__menu .temp li {
-        padding: 15px 10px;
-    }
-    .event .overlay {
-        position: absolute;
-        top: 89%;
-        left: 48%;
-    }
-    .parent .frend {
-        text-align: center;
-        display: flex;
-        padding: 0px 100px;
-    }
-    .jack {
-        padding: 25px 140px;
-    }
-    .married {
-        padding: 50px 40px;
-    }
-    .cardd {
-        display: none;
-    }
-    .cardd li {
-        padding: 15px 75px 15px 25px;
-        font-size: 15px;
-        background-color: rgb(255, 255, 255);
-        cursor: pointer;
-    }
-    .hover:hover .cardd {
-        display: block;
-    }
-}
-
-@media (max-width: 426px) {
-    .event .overlay {
-        top: 84%;
-        left: 41%;
-    }
-    .married {
-        padding: 50px 23px;
-    }
-    .event {
-        padding: 80px 15px;
-    }
-    .frend__img {
-        padding: 40px 45px;
-    }
-    .jack {
-        padding: 25px 0px;
-    }
-    .time .time__last {
-        padding: 0rem 0rem 0;
-    }
-    .parent .frend li {
-        padding: 6px;
-    }
-    .parent .frend {
-        padding: 0px 0px;
-    }
-    .jack ul {
-        font-size: 7px;
-    }
-    @media (max-width: 320px) {
-        .parent .frend {
-            font-size: 5px;
-        }
-        .parent .frend li a {
-            font-size: 7px;
-        }
-    }
-}
 
 
 

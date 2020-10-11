@@ -2,11 +2,10 @@
             <div class="row padding" >
             <div class="col-md-3 col-12">
                 <ul>
-                    <li>Giới thiệu</li>
-                    <li>Logo của Khoa CNTT</li>
-                    <li>Lời chào mừng</li>
-                    <li>Tổ chức</li>
-                    <li>Hợp tác liên kết</li>
+                    <img src="http://cse.tlu.edu.vn/portals/0/images/img-01.png" alt=""> <br> 
+                    Địa chỉ: nhà C1, Đại học Thủy lợi, 175 Tây Sơn, Đống Đa, Hà Nội. <br>
+                    Điện thoại: (+84)-024 3 5632211. <br>
+                    Email: vpkcntt@tlu.edu.vn
                 </ul>
             </div>
             <div class="col-md-3 col-12">
@@ -40,7 +39,7 @@
 		    <div class="row bg-footer ">
 			<div class="col-12 d-flex justify-content-center align-items-center ">
 				<div>
-					Copyrights &copy Đại Học Thủy Lợi All Rights Reserved
+                    Copyrights &copy Khoa Công nghệ thông tin - Đại học Thủy lợi All Rights Reserved
 				</div>
 			</div>
         </div>

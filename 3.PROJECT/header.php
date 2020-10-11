@@ -26,12 +26,9 @@
         <!-- start header -->
 
         <div class="header">
-            <div>
-
-            </div>
             <div class="header__menu">
-                <div class="header__logo" style="padding-bottom: 25px">
-                    <img src="http://localhost/CSE485_1851171393_NguyenXuanThanh/3.PROJECT/images/logo.jpg" alt="" class="w-100">
+                <div class="header__logo " style="padding-bottom: 25px">
+                    <img  class="w-100" src="http://localhost/CSE485_1851171393_NguyenXuanThanh/3.PROJECT/images/logo.jpg" alt="">
                 </div>
                 <div class="humbeger">
                     <div class="line"></div>
