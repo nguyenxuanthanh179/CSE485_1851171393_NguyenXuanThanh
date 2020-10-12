@@ -3,9 +3,9 @@
         $code = $_GET['code'];
     }
 
-    // B1: Ket noi Database Server
+   
     // B1: Ket noi database Server;
-    $conn = mysqli_connect('localhost','root','','project');
+    $conn = mysqli_connect('localhost','root','','webkhoa');
     if(!$conn){
         die('Khong the ket noi');
     }

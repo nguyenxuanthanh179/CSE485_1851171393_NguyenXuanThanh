@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Đăng ký</title>
+    <title>Đăng ký</title>
+    <link rel="shortcut icon" href="/images/CSE logo.jpg" type="images/jpg">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/register.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -12,8 +13,8 @@
 </head>
 <!--Coded with love by Mutiullah Samim-->
 <body>
-	<div class="container h-100">
-		<div class="d-flex justify-content-center h-100" style="margin-top:200px;">
+	<div class="container h-100"  style="margin-top:100px; margin-bottom: 100px">
+		<div class="d-flex justify-content-center h-100">
 			<div class="user_card " style=" width: 450px; height:650px;">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
@@ -75,7 +76,7 @@
                             <input type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Register">
                         </div>
                         <div class="login-register">
-                            <a href="login.php">Login</a>
+                        <p class="text-center">Already have an account? <a href="login.php">Login</a>
                         </div>
                     </form>
 			</div>

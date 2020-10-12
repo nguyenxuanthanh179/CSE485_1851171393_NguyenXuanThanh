@@ -12,8 +12,8 @@
         <!-- start married -->
         <div class="married container">
             <div class="row" style="display: flex;
-    justify-content: center;
-    padding-bottom: 50px;">
+            justify-content: center;
+            padding-bottom: 50px;">
                 <h2>Giới thiệu</h2>
             </div>
             <div class="row" >

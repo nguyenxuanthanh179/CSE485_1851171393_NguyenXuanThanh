@@ -1,0 +1,9 @@
+Vấn đề cần khắc phục:
+- Giao diện không thu hút
+- Khi responsive mất nội dung navigation
+- Thiếu phần cho sinh viên, cựu sinh viên, phụ huynh có thể trao đổi
+- Nhiều link trỏ tới trang chủ của khoa
+
+Đề xuất:
+- Thiết kế lại toàn bộ trang web
+- Thêm phần diễn đàn để mọi người có thể trao đổi với nhau

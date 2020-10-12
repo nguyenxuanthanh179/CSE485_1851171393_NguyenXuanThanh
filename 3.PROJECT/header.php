@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Trang chủ</title>
+    <title>Khoa Công nghệ thông tin - Trường Đại học Thủy Lợi</title>
+    <link rel="shortcut icon" href="/images/CSE logo.jpg" type="images/jpg">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,13 +23,14 @@
 </head>
 
 <body>
+
     <div class="wrapper">
         <!-- start header -->
 
         <div class="header">
             <div class="header__menu">
                 <div class="header__logo " style="padding-bottom: 25px">
-                    <img  class="w-100" src="http://localhost/CSE485_1851171393_NguyenXuanThanh/3.PROJECT/images/logo.jpg" alt="">
+                    <img  class="w-100" src="http://localhost/CSE485_1851171393_NguyenXuanThanh/3.PROJECT/images/logo.jpg">
                 </div>
                 <div class="humbeger">
                     <div class="line"></div>
@@ -37,7 +39,7 @@
                 </div>
                 <ul class="temp">
                     <li class="hover">
-                        <a href="index.php">Trang chủ</a>
+                        <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i></a>
                     </li>
                     <li class="hover">
                         <a href="index.php">Giới thiệu</a>
@@ -76,13 +78,15 @@
                             <li><a href="#">Tuyển dụng</a></li>
                         </ul>
                     </li>
-                    <li class="hover">
-                        <a href="#">(+)</a>
-                        <ul class="cardd">
-                            <li><a href="login.php">Login</a></li>
-                            <li><a href="register.php">Register</a></li>
-                        </ul>
-                    </li>
+                    
+                        <!--  -->
+                        <li class="hover">
+                            <a href="#">(+)</a>
+                            <ul class="cardd">
+                                <li><a href="login.php">Login</a></li>
+                                <li><a href="#">EN</a></li>
+                            </ul>
+                        </li>
                 </ul>
             </div>
         </div>

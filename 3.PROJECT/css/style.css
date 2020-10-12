@@ -9,10 +9,10 @@ body {
     background: #74bad648 !important;
 }
 
-.wrapper {
-    max-width: 100%;
-    overflow: hidden;
-}
+    /* .wrapper {
+        max-width: 80%;
+        overflow: hidden;
+    } */
 
 a {
     text-decoration: none;

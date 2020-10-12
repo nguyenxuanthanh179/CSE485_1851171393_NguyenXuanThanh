@@ -3,12 +3,12 @@
 
     $first_name = $_POST['yourname'];
 	if (empty($first_name)) {
-		$errors[] = 'You forgot to enter your first name.';
+		$errors[] = 'You forgot to enter your name.';
     }
     
     $last_name = $_POST['username'];
 	if (empty($last_name)) {
-		$errors[] = 'You forgot to enter your last name.';
+		$errors[] = 'You forgot to enter your username.';
     }
     
     $email = $_POST['email'];
@@ -30,8 +30,8 @@
         $host = 'localhost';
         $user = 'root';
         $pass = '';
-        $db   = 'project';
-        // B1: Ket noi DS
+        $db   = 'webkhoa';
+        // B1: Ket noi DB
         $conn = mysqli_connect($host, $user, $pass, $db);
         if(!$conn){
             die("Ko the ket noi");
@@ -50,18 +50,17 @@
             if(mysqli_query($conn, $sql)){
                 require_once "contact.php";
                 $m = new sendMail();
-
                 $to = $email;
-                $tieudethu = "[Web2Code2Vn] Please verify your email address";           
-                $noidungthu = "Bạn đã đăng kí tài khoản tại Web2Code2VN, để sử dụng tài khoản, vui lòng nhấp vào liên kết
-                sau đây: <a href='http://localhost/prac04/active.php?code=".$activation_code."'>Click Here</a>";
+                $tieudethu = "[Đăng ký] Please verify your email address";           
+                $noidungthu = "Bạn đã đăng kí tài khoản tại Khoa CNTT - ĐH Thủy Lợi, để sử dụng tài khoản, vui lòng nhấp vào liên kết
+                sau đây: <a href='http://localhost/CSE485_1851171393_NguyenXuanThanh/3.PROJECT/active.php?code=".$activation_code."'>Click Here</a>";
                 
                 //dùng mail test, đừng dùng mail chính thức
-                $from = "web2code2vn@gmail.com";
-            
+                $from = "mintuan1103@gmail.com";
+                
                 //pass email gmail
-                $p = "nigosmckbdkvpgdo"; //thay_mat_khau_cua_ban_vao_day
-                $m -> sendMailFromLocalhost($to, $from, $tennguoigui="Web2Code2Vn", $tieudethu, $noidungthu, $from, $p, $error);
+                $p = "nigosmckbdkvpgdo";
+                $m -> sendMailFromLocalhost($to, $from, $tennguoigui="CNTT-ĐH Thủy Lợi", $tieudethu, $noidungthu, $from, $p, $error);
                 header("Location: register-thanks.php");
                 exit();
             }else{

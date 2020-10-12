@@ -1,7 +1,12 @@
 /* footer */
-ul{
-	list-style: none;
+footer .row ul li a {
+	color: white;
 }
+
+footer .row ul li a:hover{
+    color: grey;
+}
+
 footer{
     color: #fff;
     background: #273139;
@@ -10,7 +15,4 @@ footer{
 	height: 50px;
     background: rgb(97,117,126);
     background: linear-gradient(180deg, rgba(97,117,126,0.6362920168067228) 0%, rgba(55,86,96,0.9051995798319328) 44%, rgba(57,83,97,1) 100%);
-}
-.padding{
-    padding: 50px 30px 50px 170px
 }

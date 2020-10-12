@@ -172,6 +172,12 @@
     }
 }
 
+/* @media (max-width: 1366px){
+    .header{
+        
+    }
+} */
+
 @media (max-width: 768px) {
     .header {
         height: 14vh;
