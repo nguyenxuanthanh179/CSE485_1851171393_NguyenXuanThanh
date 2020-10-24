@@ -32,12 +32,12 @@
                 <div class="header__logo " style="padding-bottom: 25px">
                     <img  class="w-100" src="http://localhost/CSE485_1851171393_NguyenXuanThanh/3.PROJECT/images/logo.jpg">
                 </div>
-                <div class="humbeger">
+                <div class="humbeger" >
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <ul class="temp">
+                <ul class="temp" >
                     <li class="hover">
                         <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i></a>
                     </li>
@@ -62,13 +62,7 @@
                         </ul>
                     </li>
                     <li class="hover">
-                        <a href="#">Sinh viên</a>
-                        <ul class="cardd">
-                            <li><a href="#">Tài liệu sinh viên</a></li>
-                            <li><a href="#">Tổ tư vấn học tập</a></li>
-                            <li><a href="#">Biểu mẫu ĐATN</a></li>
-                            <li><a href="#">Luận văn tốt nghiệp</a></li>
-                        </ul>
+                        <a href="sinhvien.php">Sinh viên</a>
                     </li>
                     <li class="hover">
                         <a href="#">Tin tức & Thông báo</a>
