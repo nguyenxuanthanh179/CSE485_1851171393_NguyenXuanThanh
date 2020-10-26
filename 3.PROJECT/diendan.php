@@ -1,43 +1,57 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Diễn đàn - CSE</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="css/diendan.css">
+    <script src="https://kit.fontawesome.com/591c492c07.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
       <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-            <a class="navbar-brand" href="#">CSE.TLU</a>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.php" style="font-weight:600;">CSE.TLU</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation"></button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Danh sách câu hỏi</a>
+                      <a class="nav-link" href="#">
+                      <i class="fas fa-align-left" style="margin-left:50%;"></i> <br>
+                            Danh sách câu hỏi</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="#">Chưa trả lời</a>
+                          <a class="nav-link" href="#">
+                          <i class="far fa-clone" style="margin-left:45%;"></i> <br>  
+                            Chưa trả lời</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="#">Từ khóa</a>
+                          <a class="nav-link" href="#">
+                          <i class="fas fa-tags" style="margin-left:40%;"></i> <br> 
+                            Từ khóa</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="#">Thành viên</a>
+                          <a class="nav-link" href="#">
+                          <i class="fas fa-users"style="margin-left:40%;"></i> <br>  
+                            Thành viên</a>
                       </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tạo câu hỏi</a>
+                        <a class="nav-link" href="#" style="color: #10ad03 !important; font-weight: 500">
+                        <i class="fas fa-question" style="margin-left:45%;"></i> 
+                            <br>   
+                        Tạo câu hỏi</a>
                     </li>
                     
                 </ul>
                 <ul  class="navbar-nav ml-auto mt-2 mt-lg-0">
                   <li class="nav-item mr-auto">
-                      <a class="nav-link" href="#">Đăng nhập</a>
+                      <a class="nav-link" href="login.php">
+                      <i class="fas fa-key" style="margin-left:40%;"></i> <br>
+                          Đăng nhập</a>
                   </li>
                 </ul>
   
@@ -46,7 +60,7 @@
       </header>
       <main class="container">
           <div class="row">
-            <div class="col-md-8 col-12">
+            <div class="col-md-8 col-12 left">
                 <div class="box1">
                     <div>
                         Câu hỏi và trả lời gần đây
@@ -78,109 +92,56 @@
                             </div>
                         </div>
                     </div>
-                    <div class="content1 row">
-                        <div class="col-md-3">
-                            <div class="d-flex">
-                                <div>
-                                    <div>0</div>
-                                    <div>k thích</div>
-                                </div>
-                                <div>
-                                    <div>0</div>
-                                    <div>trả lời</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-9">
-                            <div>
-                                <div>10 sai lầm của sinh viên năm Nhất</div>
-                                <div>đã hỏi <span>2 ngày</span> trước trong . <span>3.1-Các vấn đề chung</span> bởi <span> admin </span> (560 điểm)</div>
-                                <div class="d-flex">
-                                    <div>năm nhất</div>
-                                    <div>sai lầm</div>
-                                    <div>tư vấn</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content1 row">
-                        <div class="col-md-3">
-                            <div class="d-flex">
-                                <div>
-                                    <div>0</div>
-                                    <div>k thích</div>
-                                </div>
-                                <div>
-                                    <div>0</div>
-                                    <div>trả lời</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-9">
-                            <div>
-                                <div>10 sai lầm của sinh viên năm Nhất</div>
-                                <div>đã hỏi <span>2 ngày</span> trước trong . <span>3.1-Các vấn đề chung</span> bởi <span> admin </span> (560 điểm)</div>
-                                <div class="d-flex">
-                                    <div>năm nhất</div>
-                                    <div>sai lầm</div>
-                                    <div>tư vấn</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content1 row">
-                        <div class="col-md-3">
-                            <div class="d-flex">
-                                <div>
-                                    <div>0</div>
-                                    <div>k thích</div>
-                                </div>
-                                <div>
-                                    <div>0</div>
-                                    <div>trả lời</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-9">
-                            <div>
-                                <div>10 sai lầm của sinh viên năm Nhất</div>
-                                <div>đã hỏi <span>2 ngày</span> trước trong . <span>3.1-Các vấn đề chung</span> bởi <span> admin </span> (560 điểm)</div>
-                                <div class="d-flex">
-                                    <div>năm nhất</div>
-                                    <div>sai lầm</div>
-                                    <div>tư vấn</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <input type="text" class="w-100" name="" id="" placeholder="Hãy bắt đầu mọi thứ bằng một câu hỏi">
+ 
+                    <!-- <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="col-md-3">
+                                        
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="col-md-9">
+                                        10 sai lầm của sinh viên năm nhất
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table> -->
+                    <div id=question>
+                        Hãy bắt đầu mọi thứ bằng <a href="#">một câu hỏi</a>
                     </div>
                 </div>
           </div>
-          <div class="col-md-4 col-12">
+          <div class="col-md-4 col-12 right">
                <div class="d-flex search">
                     <div>
                         <input type="text" name="" id="" placeholder="tìm kiếm">
                     </div>
                     <div>
-                        <input type="submit" value="Tìm">
+                        <input type="submit" id="tim" value="Tìm">
                     </div>
                </div>
-               <div>
-                   <div class="d-flex">
-                        <div>
+               <div style="margin-top: 15px; font-size:20px;">
+                   <div class="d-flex" >
+                        <div class="col-md-6 question">
+                            <i class="fa fa-question"></i>
                             4 câu hỏi
                         </div>
-                        <div>
+                        <div class="col-md-6 answer">
+                        <i class="far fa-comment-alt"></i>
                             3 trả lời
                         </div>
                    </div>
                    <div class="d-flex">
-                       <div>
+                       <div class="col-md-6 cmt">
+                       <i class="far fa-comment"></i>
                            0 bình luận
                        </div>
-                       <div>
+                       <div class="col-md-6 member">
+                           <i class="fa fa-users"></i>
                            3 thành viên
                        </div>
                    </div>
@@ -199,7 +160,7 @@
                        </ul>
                     </div>
                </div>
-               <div>
+               <div class="bot">
                    <p>Chào mừng đến với CSE.TLU nơi bạn có thể đặt câu hỏi</p>
                </div>
           </div>

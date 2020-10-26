@@ -1,0 +1,106 @@
+body{
+    background: red;
+}
+
+header ul li{
+    margin-left: 5px;
+}
+
+header ul li a{
+    color: white !important;
+    background: #414950;
+    opacity: 0.5;
+}
+
+header ul li a:hover{
+    opacity: 1;
+}
+
+
+.container{
+    margin-top: 10px;
+}
+
+.container .left .box1{
+    background-color:  #3598db;
+    color: white;
+    height: 50px;
+    font-weight: 500;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.container .left .content{
+    background: whitesmoke;
+}
+
+.container .left div#question{
+    color: white;
+    height: 40px;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 5px 0px 0px 20px;
+    background-color:  #3598db;
+}
+
+.container .left div#question a{
+    color: white;
+    opacity: 0.7;
+    
+}
+
+.container .right .search{
+    background-color: #27ba99;
+    width: 100%;
+    font-size: 18px;
+    padding: 8px 0px 0px 20px;
+    height: 50px;
+}
+
+.container .right .search input{
+    width: 150%;
+}
+
+.container .right .search input#tim{
+    margin-left: 15px;
+    background-color: #137964;
+}
+
+.container .right .question{
+    background-color: #1bbc9b;
+    height: 80px;
+    padding: 25px 30px;
+}
+
+.container .right .answer{
+    background-color: #2dcc70;
+    padding: 25px 30px;
+}
+
+.container .right .cmt{
+    background-color: #f1c40f;
+    height: 80px;
+    padding: 25px 25px;
+}
+
+.container .right .member{
+    background-color: #e67f22;
+    padding: 25px 15px;
+}
+
+.chuyen-muc{
+    background: whitesmoke;
+    margin-top: 15px;
+}
+
+.bot{
+    background: #414950;;
+    height: 90px !important;
+    color: white;
+    padding: 20px  ;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+
