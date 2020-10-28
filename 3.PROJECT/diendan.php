@@ -157,7 +157,7 @@
                    </div>
                    <div>
                        <ul>
-                           <li><a href="#" title="">Tất cả chuyên mục </a></li>
+                           <li><a href="categories.php" title="">Tất cả chuyên mục </a></li>
                            <li><a href="#" title="">0. CSE Forum </a><span>(0)</span></li>
                            <li><a href="#" title="">1.Tin tức - thông báo </a><span>(0)</span></li>
                            <li><a href="#" title="">2.Tư vấn Tuyển sinh</a> <span>(3)</span></li>
