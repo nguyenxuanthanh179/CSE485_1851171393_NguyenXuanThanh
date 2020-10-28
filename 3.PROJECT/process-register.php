@@ -39,9 +39,16 @@
         // B2: Khai bao truy van
             $sql = "SELECT * FROM users WHERE email = '$email'";
             $result = mysqli_query($conn, $sql);
+            $user = mysqli_fetch_assoc($result);
         // B3: Kiem tra ban ghi co ton tai
-        if(mysqli_num_rows($result)>0){
-            echo "Nguoi dung voi Email da ton  tai";
+        if(mysqli_num_rows($user)>0){
+            if ($user['username'] === $username) {
+                array_push($errors, "Username already exists");
+                }
+    
+                if ($user['email'] === $email) {
+                array_push($errors, "Email already exists");
+            }
         }else{
             $hashed_passcode = password_hash($password1, PASSWORD_DEFAULT);
             $activation_code = substr(md5(uniqid(rand(), true)), 16, 16);
@@ -63,9 +70,15 @@
                 $m -> sendMailFromLocalhost($to, $from, $tennguoigui="CNTT-ĐH Thủy Lợi", $tieudethu, $noidungthu, $from, $p, $error);
                 header("Location: register-thanks.php");
                 exit();
-            }else{
-                echo "Loi. Kiem tra lai cau truy van: ".$sql;
             }
+            // else{
+            //     echo "Loi. Kiem tra lai cau truy van: ".$sql;
+            // }
+                $rgt_id = mysqli_insert_id($conn); // get id of created user
+
+				$_SESSION['user'] = getUserById($rgt_id); // put logged in user into session array
+
+				$_SESSION['message'] = "You have successfully registered";
         }
     }else{
         echo "Hien thi loi";

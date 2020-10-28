@@ -28,9 +28,9 @@
         <!-- start header -->
 
         <div class="header">
-            <div class="header__menu">
-                <div class="header__logo " style="padding-bottom: 25px">
-                    <img  class="w-100" src="http://localhost/CSE485_1851171393_NguyenXuanThanh/3.PROJECT/images/logo.jpg">
+        <div class="header__menu">
+                <div class="header__logo " style="padding-bottom: 15px">
+                    <img src="http://localhost/CSE485_1851171393_NguyenXuanThanh/3.PROJECT/images/logo.jpg">
                 </div>
                 <div class="humbeger" >
                     <div class="line"></div>
@@ -75,11 +75,18 @@
                     
                         <!--  -->
                         <li class="hover">
+                        <?php if (isset($_SESSION['user']['username'])) { ?>
+                            <a href="#"><?php echo $_SESSION['user']['username'] ?></a>
+                            <ul class="cardd">
+                                <li><a href="logout.php">logout</a></li>
+                                <li><a href="#">EN</a></li>
+                            </ul>
+                        <?php } else{ ?>
                             <a href="#">(+)</a>
                             <ul class="cardd">
                                 <li><a href="login.php">Login</a></li>
                                 <li><a href="#">EN</a></li>
-                            </ul>
+                        <?php } ?>
                         </li>
                 </ul>
             </div>
