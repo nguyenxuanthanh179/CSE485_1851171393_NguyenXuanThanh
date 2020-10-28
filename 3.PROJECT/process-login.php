@@ -1,3 +1,4 @@
+
 <?php
 // B1: Ket noi database Server;
 $conn = mysqli_connect('localhost','root','','webkhoa');
@@ -32,6 +33,8 @@ if (isset($_POST['button'])) {
             $password_hash = $row['password'];
             // echo $password_hash;
             if(password_verify($password,$password_hash)){
+                $rgt_id = mysqli_fetch_assoc($result)['userid'];
+                $_SESSION['user'] = getUserById($rgt_id);
                 header("Location: index.php");
             }else{
                 echo "Chưa khớp";
@@ -45,4 +48,15 @@ if (isset($_POST['button'])) {
         echo "Co loi nhap lieu ...";
     }
 }
+
+function getUserById($id)
+	{
+		global $conn;
+		$sql = "SELECT * FROM user WHERE userid=$id LIMIT 1";
+
+		$result = mysqli_query($conn, $sql);
+		$user = mysqli_fetch_assoc($result);
+
+		return $user; 
+	}
 ?>

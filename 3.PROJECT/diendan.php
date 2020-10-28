@@ -1,3 +1,10 @@
+<?php
+    $conn = mysqli_connect('localhost','root','','webkhoa');
+    if(!$conn){
+        die('Khong the ket noi');
+    }
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -68,51 +75,49 @@
                 </div>
                 <div class="content">
                     <div class="content1 row">
-                        <div class="col-md-3">
+                                <?php
+                                    $sql = "SELECT * FROM forum";
+                                    $result = mysqli_query($conn,$sql);
+                                    while($row = mysqli_fetch_assoc($result))
+                                    {
+                                ?>
+                        <div class="col-md-4 left">
                             <div class="d-flex">
-                                <div>
+                                <button id="like" class="btn btn-primary">
+                                    <div id="qlt1">0</div>
+                                    <div><i class="fas fa-thumbs-up"></i></div>
+                                </button>
+
+                                <button id="unlike" class="btn btn-danger">
+                                    <div id="qlt2">0</div>
+                                    <div><i class="fas fa-thumbs-down"></i></div>
+                                </button>
+                                    
+                                <button id="answer" class="btn btn-success">
                                     <div>0</div>
-                                    <div>k thích</div>
-                                </div>
-                                <div>
-                                    <div>0</div>
-                                    <div>trả lời</div>
-                                </div>
+                                    <div>Trả lời</div>
+                                </button>
                             </div>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-8 right">
                             <div>
-                                <div>10 sai lầm của sinh viên năm Nhất</div>
-                                <div>đã hỏi <span>2 ngày</span> trước trong . <span>3.1-Các vấn đề chung</span> bởi <span> admin </span> (560 điểm)</div>
-                                <div class="d-flex">
-                                    <div>năm nhất</div>
-                                    <div>sai lầm</div>
-                                    <div>tư vấn</div>
+                                <div class="title"><?php echo $row['title'] ?></div>
+                                <div>đã hỏi lúc <span><?php echo $row['date'] ?></span> trong <a href="#" class=""><?php echo $row['catalogue'] ?></a> bởi <span> <?php echo $row['user'] ?> </span> (560 điểm)</div>
+                                <div class="d-flex tag">
+                                    <div style="background: orange; border: 1px solid white;">năm nhất</div>
+                                    <div style="background: orange; border: 1px solid white;">sai lầm</div>
+                                    <div style="background: orange; border: 1px solid white;">tư vấn</div>
                                 </div>
                             </div>
                         </div>
+                        
+                                    <?php }
+                                    ?>
+
                     </div>
- 
-                    <!-- <table class="table">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="col-md-3">
-                                        
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="col-md-9">
-                                        10 sai lầm của sinh viên năm nhất
-                                    </div>
-                                </td>
-                            </tr>
-                            
-                        </tbody>
-                    </table> -->
-                    <div id=question>
+                </div>
+                <div id=question>
                         Hãy bắt đầu mọi thứ bằng <a href="#">một câu hỏi</a>
-                    </div>
                 </div>
           </div>
           <div class="col-md-4 col-12 right">
@@ -168,7 +173,8 @@
       </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/diendan.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>

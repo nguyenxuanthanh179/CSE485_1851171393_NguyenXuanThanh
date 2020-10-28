@@ -18,7 +18,7 @@
             </div>
             <div class="row" >
 
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-6 col-md-12" style="display: flex;justify-content: center;">
                     <iframe width="520" height="335" src="https://www.youtube.com/embed/pv3DAYZzLGE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="col-lg-6 col-md-12">

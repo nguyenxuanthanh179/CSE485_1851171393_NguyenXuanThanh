@@ -23,7 +23,7 @@ header ul li a:hover{
 
 .container .left .box1{
     background-color:  #3598db;
-    color: white;
+    color:white;
     height: 50px;
     font-weight: 500;
     font-size: 30px;
@@ -31,7 +31,22 @@ header ul li a:hover{
 }
 
 .container .left .content{
-    background: whitesmoke;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* .container .left .content .left{
+    justify-items: center;
+} */
+
+.container .left .content button{
+    width: 80px;
+    height: 60px;
+}
+
+.container .left .content .right .title{
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .container .left div#question{
