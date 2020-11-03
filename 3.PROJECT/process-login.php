@@ -37,7 +37,7 @@ if (isset($_POST['button'])) {
                 $_SESSION['user'] = getUserById($rgt_id);
                 header("Location: index.php");
             }else{
-                echo "Chưa khớp";
+                echo ("Bạn đã nhập sai tên hoặc mật khẩu");
             }
         }else{
             echo ".....";

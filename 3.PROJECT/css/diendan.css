@@ -35,6 +35,11 @@ header ul li a:hover{
     margin-bottom: 5px;
 }
 
+.content .content1{
+    
+    padding-top: 10px;
+}
+
 /* .container .left .content .left{
     justify-items: center;
 } */
@@ -116,6 +121,7 @@ header ul li a:hover{
     text-align: center;
     margin-top: 15px;
 }
+
 
 
 

@@ -47,7 +47,7 @@
                             Thành viên</a>
                       </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: #10ad03 !important; font-weight: 500">
+                        <a class="nav-link" href="post.php" style="color: #10ad03 !important; font-weight: 500">
                         <i class="fas fa-question" style="margin-left:45%;"></i> 
                             <br>   
                         Tạo câu hỏi</a>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div class="content">
-                    <div class="content1 row">
+                    <div class="row content1">
                                 <?php
                                     $sql = "SELECT * FROM forum";
                                     $result = mysqli_query($conn,$sql);
@@ -104,9 +104,8 @@
                                 <div class="title"><?php echo $row['title'] ?></div>
                                 <div>đã hỏi lúc <span><?php echo $row['date'] ?></span> trong <a href="#" class=""><?php echo $row['catalogue'] ?></a> bởi <span> <?php echo $row['user'] ?> </span> (560 điểm)</div>
                                 <div class="d-flex tag">
-                                    <div style="background: orange; border: 1px solid white;">năm nhất</div>
-                                    <div style="background: orange; border: 1px solid white;">sai lầm</div>
-                                    <div style="background: orange; border: 1px solid white;">tư vấn</div>
+                                    <div style="background: orange; border: 1px solid white;"><?php echo $row['tag'] ?></div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -117,7 +116,7 @@
                     </div>
                 </div>
                 <div id=question>
-                        Hãy bắt đầu mọi thứ bằng <a href="#">một câu hỏi</a>
+                        Hãy bắt đầu mọi thứ bằng <a href="post.php">một câu hỏi</a>
                 </div>
           </div>
           <div class="col-md-4 col-12 right">
