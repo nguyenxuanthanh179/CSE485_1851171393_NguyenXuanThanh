@@ -1,5 +1,5 @@
 <?php
-    include('includes/header.php')
+    include('includes/header.php');
 ?>
          <!-- start banner -->
          <div class="banner">

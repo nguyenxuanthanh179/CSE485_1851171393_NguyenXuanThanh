@@ -74,7 +74,7 @@
                         </li>
                     <?php } else{ ?>
                         <li class="hover">
-                            <a href="#"><?php echo "Welcome:".$_SESSION['username']; ?><i class="fas fa-angle-down ml-1"></i></a>
+                            <a href="#"><?php echo "Welcome: ".$_SESSION['username']; ?><i class="fas fa-angle-down ml-1"></i></a>
                             <ul class="cardd cardd2">
                                  <li><a href="logout.php">Logout</a></li>
                             </ul>

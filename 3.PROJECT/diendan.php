@@ -1,10 +1,7 @@
 <?php
-    $conn = mysqli_connect('localhost','root','','webkhoa');
-    if(!$conn){
-        die('Khong the ket noi');
-    }
+    include('includes/config.php');
+    session_start();
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -53,14 +50,27 @@
                         Tạo câu hỏi</a>
                     </li>
                     
-                </ul>
-                <ul  class="navbar-nav ml-auto mt-2 mt-lg-0">
-                  <li class="nav-item mr-auto">
-                      <a class="nav-link" href="login.php">
-                      <i class="fas fa-key" style="margin-left:40%;"></i> <br>
-                          Đăng nhập</a>
-                  </li>
-                </ul>
+                </ul> 
+                <?php
+                        if(!isset($_SESSION['username'])){
+                    ?>
+                        <ul  class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item mr-auto">
+                            <a class="nav-link" href="login.php">
+                            <i class="fas fa-key" style="margin-left:40%;"></i> <br>
+                                Đăng nhập</a>
+                        </li>
+                        </ul>
+               <?php } else{ ?>
+                        <ul  class="navbar-nav ml-auto mt-2 mt-lg-0">
+                            <li class="nav-item mr-auto position-relative">
+                                <a href="#"><?php echo "Welcome: ".$_SESSION['username']; ?><i class="fas fa-angle-down ml-1"></i></a>
+                                <ul class="position-absolute">
+                                    <li><a href="logout.php">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    <?php } ?>  
   
             </div>
         </nav>
