@@ -47,7 +47,7 @@
                             Thành viên</a>
                       </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="post.php" style="color: #10ad03 !important; font-weight: 500">
+                        <a class="nav-link" href="add.php" style="color: #10ad03 !important; font-weight: 500">
                         <i class="fas fa-question" style="margin-left:45%;"></i> 
                             <br>   
                         Tạo câu hỏi</a>
@@ -101,12 +101,18 @@
                         </div>
                         <div class="col-md-8 right">
                             <div>
-                                <div class="title"><?php echo $row['title'] ?></div>
+                                <div class="title"><a href="edit.php?title=<?php echo $row['title']?>" style="color: black;"><?php echo $row['title'] ?></a></div>
                                 <div>đã hỏi lúc <span><?php echo $row['date'] ?></span> trong <a href="#" class=""><?php echo $row['catalogue'] ?></a> bởi <span> <?php echo $row['user'] ?> </span> (560 điểm)</div>
                                 <div class="d-flex tag">
-                                    <div style="background: orange; border: 1px solid white;"><?php echo $row['tag'] ?></div>
-                                    
+                                    <div class="col-md-4">
+                                        <div style="background: orange;"><?php echo $row['tag'] ?></div>
+                                    </div>   
+                                    <div class="col-md-8" style="padding-left: 30%">
+                                        <a type="submit" onclick="if (!confirm('Bạn có chắc muốn xóa?')) { return false }" href="delete.php?title=<?php echo $row['title']?>" ><i class="fas fa-trash-alt"></i></a>
+                                        <a style="padding-left:20px;" href="edit.php?title=<?php echo $row['title']?>"> <i class="fas fa-edit"></i></a>
+                                    </div> 
                                 </div>
+                                
                             </div>
                         </div>
                         
@@ -116,7 +122,7 @@
                     </div>
                 </div>
                 <div id=question>
-                        Hãy bắt đầu mọi thứ bằng <a href="post.php">một câu hỏi</a>
+                        Hãy bắt đầu mọi thứ bằng <a href="add.php">một câu hỏi</a>
                 </div>
           </div>
           <div class="col-md-4 col-12 right">
