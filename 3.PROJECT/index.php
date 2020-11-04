@@ -1,12 +1,11 @@
 <?php
-    include('header.php');
+    include('includes/header.php')
 ?>
-
          <!-- start banner -->
          <div class="banner">
             <div class="banner__text">
-               <input type="text" class="search" name="search" id="" placeholder="Tìm kiếm">
-               <button class="search"><i class="fa fa-search" aria-hidden="true"></i></button>
+               <input type="text" class="search" name="search" id="" placeholder="Tìm kiếm" style="outline: none">
+               <button class="search" style="outline: none"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
         </div>
         <!-- start married -->
@@ -177,5 +176,5 @@
         </div>
         <!-- start attending -->
 <?php
-    include('footer.php');
+    include('includes/footer.php');
 ?>

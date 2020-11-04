@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 120px;
+    padding: 30px 50px;
 }
 .hover a{
     color: #fff;
@@ -43,10 +43,29 @@
     color: #000;
     font-size: 18px;
 }
-.cardd {
+.temp .hover .cardd1 li{
+    width: 246px;
+    padding: 10px 55px 10px 25px;
+    font-size: 15px;
+    background: rgb(176,251,248);
+    background: radial-gradient(circle, rgba(176,251,248,1) 0%, rgba(114,135,161,1) 100%);
+}
+.temp .hover .cardd2 li{
+    width: 100px !important;
+}
+.cardd1 {
     position: absolute;
     display: none;
     top: 100%;
+    transform: translateY(30%);
+    font-family: 'Cardo', serif;
+    background-color: #000;
+}
+.cardd2 {
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 10%;
     transform: translateY(30%);
     font-family: 'Cardo', serif;
     background-color: #000;
@@ -80,20 +99,38 @@
     top: 70%;
     left: 50%;
 }
-
-
-
-@media (max-width: 1611px) {
-    .header .header__menu {
-        padding: 30px 20px;
-    }
+@media (max-width: 1633px){
+    .header .header__menu { 
+        padding: 30px 25px;
+     }
 }
-@media (max-width: 1386px) {
-    .header .header__menu {
-        padding: 30px 0px;
+@media only screen and (min-width:985px) and ( max-width: 1600px ){
+    .header {  
+        height: 10vh;   
+        background:none;
     }
+    .header .header__menu {
+       flex-direction: column; 
+       padding: 0px !important;
+    }
+    .header__logo{
+        padding: 85px 0px 15px 0px !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+    }
+    .temp{
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        background: aliceblue;
+        margin: 0px !important;
+
+    }
+   
 }
-@media (max-width: 1024px) {
+@media (max-width: 984px) {
     .header {
         height: 14vh;
         font-size: 12px;
@@ -104,7 +141,7 @@
         margin-bottom: 10px;
     }
     .humbeger {
-        display: block;
+        display: block !important;
         background: #2d5a7f;
         padding: 5px;
         border-radius: 5px;

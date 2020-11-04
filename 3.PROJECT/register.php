@@ -3,8 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Đăng ký</title>
-    <link rel="shortcut icon" href="/images/CSE logo.jpg" type="images/jpg">
+	<title>Đăng ký</title>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/register.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -13,8 +12,8 @@
 </head>
 <!--Coded with love by Mutiullah Samim-->
 <body>
-	<div class="container h-100"  style="margin-top:100px; margin-bottom: 100px">
-		<div class="d-flex justify-content-center h-100">
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100" style="margin-top:200px;">
 			<div class="user_card " style=" width: 450px; height:650px;">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
@@ -27,20 +26,20 @@
 					<form class="form-horizontal" method="post" action="process-register.php">
 
                         <div class="form-group">
-                            <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                            <label for="txtFirstName" class="cols-sm-2 control-label">First Name</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
-                                    <span class="input-group-addon icons"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="yourname" id="name" placeholder="Enter your Name" />
+                                <span class="input-group-addon icons"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="txtFirstName" id="txtFirstName" placeholder="Your first name"/>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="username" class="cols-sm-2 control-label">Username</label>
+                            <label for="txtLastName" class="cols-sm-2 control-label">Last Name</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
-                                    <span class="input-group-addon icons"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="username" id="username" placeholder="Enter your Username" />
+                                    <span class="input-group-addon icons"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="txtLastName" id="txtLastName" placeholder="Your last name"/>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +48,8 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon icons"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" />
+
+                                    <input type="text" class="form-control" name="txtEmail" id="txtEmail" placeholder="Your Email" />
                                 </div>
                             </div>
                         </div>
@@ -59,7 +59,8 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon icons"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                    <input type="password" class="form-control" name="password1" id="password" placeholder="Enter your Password" />
+
+                                    <input type="password" class="form-control" name="txtPassword1" id="txtPassword1" placeholder="Your Password" />
                                 </div>
                             </div>
                         </div>
@@ -68,15 +69,16 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon icons"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                    <input type="password" class="form-control" name="password2" id="password2" placeholder="Confirm your Password" />
+
+                                    <input type="password" class="form-control" name="txtPassword2" id="txtPassword2" placeholder="Confirm your Password"/>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group ">
-                            <input type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Register">
+                            <input type="submit" class="btn btn-primary btn-lg btn-block login-button" name="sbmRegister" id="sbmRegister" value="Register">
                         </div>
                         <div class="login-register">
-                        <p class="text-center">Already have an account? <a href="login.php">Login</a>
+                            <a href="login.php">Login</a>
                         </div>
                     </form>
 			</div>

@@ -22,7 +22,7 @@
         font-size: 15px;
       }
       .row{
-        width: 100%;
+        width: 100%;z
       }
       .bg-dark{
         padding: 30px 0px;

@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -42,52 +45,42 @@
                         <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i></a>
                     </li>
                     <li class="hover">
-                        <a href="index.php">Giới thiệu</a>
-                        <ul class="cardd">
-                            <li><a href="#">Lời chào mừng</a></li>
-                            <li><a href="#">Tổ chức</a></li>
-                            <li><a href="#">Hợp tác liên kết</a></li>
-                        </ul>
+                        <a href="gioithieu.php">Giới thiệu</a>
                     </li>
                     <li class="hover">
                         <a href="diendan.php">Diễn đàn</a>
-                    </li>
-                    <li class="hover">
-                        <a href=""#>Bộ Môn</a>
-                        <ul class="cardd">
-                            <li><a href="#">Công nghệ phần mềm</a></li>
-                            <li><a href="#">Hệ thống thông tin</a></li>
-                            <li><a href="#">Khoa học máy tính</a></li>
-                            <li><a href="#">Kỹ thuật máy tính và mạng</a></li>
-                        </ul>
                     </li>
                     <li class="hover">
                         <a href="sinhvien.php">Sinh viên</a>
                     </li>
                     <li class="hover">
                         <a href="#">Tin tức & Thông báo</a>
-                        <ul class="cardd">
+                        <ul class="cardd cardd1">
                             <li><a href="#">Sự kiện</a></li>
                             <li><a href="#">Nghiên cứu khoa học</a></li>
                             <li><a href="#">Tuyển dụng</a></li>
                         </ul>
                     </li>
                     
-                        <!--  -->
+                    <?php
+                        if(!isset($_SESSION['username'])){
+                    ?>
                         <li class="hover">
-                        <?php if (isset($_SESSION['user']['username'])) { ?>
-                            <a href="#"><?php echo $_SESSION['user']['username'] ?></a>
-                            <ul class="cardd">
-                                <li><a href="logout.php">logout</a></li>
-                                <li><a href="#">EN</a></li>
+                            <a href=""#>(+)</a>
+                            <ul class="cardd cardd2">
+                                <li><a href="login.php">login</a></li>
+                                <li><a href="register.php">Register</a></li>
                             </ul>
-                        <?php } else{ ?>
-                            <a href="#">(+)</a>
-                            <ul class="cardd">
-                                <li><a href="login.php">Login</a></li>
-                                <li><a href="#">EN</a></li>
-                        <?php } ?>
                         </li>
+                    <?php } else{ ?>
+                        <li class="hover">
+                            <a href="#"><?php echo "Welcome:".$_SESSION['username']; ?><i class="fas fa-angle-down ml-1"></i></a>
+                            <ul class="cardd cardd2">
+                                 <li><a href="logout.php">Logout</a></li>
+                            </ul>
+                        </li> 
+                    <?php } ?>                    
                 </ul>
             </div>
         </div>
+

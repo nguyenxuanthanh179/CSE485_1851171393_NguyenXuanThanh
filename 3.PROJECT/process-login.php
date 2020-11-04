@@ -1,62 +1,37 @@
-
 <?php
-// B1: Ket noi database Server;
-$conn = mysqli_connect('localhost','root','','webkhoa');
-if(!$conn){
-    die('Khong the ket noi');
-}
-if (isset($_POST['button'])) {
-    // Kiem tra
     $errors = array();
-    $username = $_POST['username'];
-	if (empty($username)) {
-		$errors[] = 'You forgot to enter your email address.';
+
+    $email = $_POST['txtEmail'];
+	if (empty($email)) {
+		$errors[] = 'You forgot to enter your email.';
+	}
+
+    $password = $_POST['txtPassword'];
+    if (empty($password)) {
+    $errors[] = 'You forgot to enter your password.';
     }
 
-    $password = $_POST['password'];
-	
-	if (empty($password)) {	
-			$errors[] = 'Your two password did not match.';
-	} 
-    // Kiem tra Error:
-    if (empty($errors)){
-        
-        // B2: Khai bao cau truy van
-        $sql = "SELECT * FROM users WHERE username='$username'";
-        // echo $sql;
+    if (empty($errors)) {
+        require("includes/config.php");
+        // B2: Khai bao truy van
+        $sql = "SELECT * FROM users WHERE email = '$email' AND status = 1";
         $result = mysqli_query($conn,$sql);
         if(mysqli_num_rows($result)>0){
-            $row =mysqli_fetch_assoc($result);
-
-
-            // print_r($row);
-            $password_hash = $row['password'];
-            // echo $password_hash;
-            if(password_verify($password,$password_hash)){
-                $rgt_id = mysqli_fetch_assoc($result)['userid'];
-                $_SESSION['user'] = getUserById($rgt_id);
+            $row = mysqli_fetch_assoc($result);
+            if(password_verify($password, $row['password']))
+            {
+                session_start();
+                $_SESSION['username'] = $email;
                 header("Location: index.php");
+                exit();
             }else{
-                echo "Chưa khớp";
+                echo "Mat khau ko chinh xac";
             }
         }else{
-            echo ".....";
+            echo "Ko ton tai Tai khoan hoac Tai khoan chua duoc kich hoat";
         }
 
-    }else{
-        // Co loi, hien thi lai loi cho nguoi dung biet
-        echo "Co loi nhap lieu ...";
+        }else{
+            echo "Hien thi loi";
     }
-}
-
-function getUserById($id)
-	{
-		global $conn;
-		$sql = "SELECT * FROM user WHERE userid=$id LIMIT 1";
-
-		$result = mysqli_query($conn, $sql);
-		$user = mysqli_fetch_assoc($result);
-
-		return $user; 
-	}
 ?>
