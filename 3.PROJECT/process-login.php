@@ -25,11 +25,7 @@
                 header("Location: index.php");
                 exit();
             }else{
-<<<<<<< HEAD
                 echo "Mat khau ko chinh xac";
-=======
-                echo ("Bạn đã nhập sai tên hoặc mật khẩu");
->>>>>>> c534d517c2faa035ad8857798239370ace3a5d65
             }
         }else{
             echo "Ko ton tai Tai khoan hoac Tai khoan chua duoc kich hoat";

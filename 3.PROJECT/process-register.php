@@ -25,7 +25,6 @@
     } else {
     $errors[] = 'You forgot to enter your password.';
     }
-
     if (empty($errors)) {
         require("includes/config.php");
         // B2: Khai bao truy van
