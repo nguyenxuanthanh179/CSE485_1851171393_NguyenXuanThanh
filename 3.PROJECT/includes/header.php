@@ -68,7 +68,7 @@
                         <li class="hover">
                             <a href=""#>(+)</a>
                             <ul class="cardd cardd2">
-                                <li><a href="login.php">login</a></li>
+                                <li><a href="login.php">Login</a></li>
                                 <li><a href="register.php">Register</a></li>
                             </ul>
                         </li>

@@ -52,7 +52,7 @@
             
                 //pass email gmail
                 $p = "nigosmckbdkvpgdo"; //thay_mat_khau_cua_ban_vao_day
-                $m -> sendMailFromLocalhost($to, $from, $tennguoigui="Web2Code2Vn", $tieudethu, $noidungthu, $from, $p, $error);
+                $m -> sendMailFromLocalhost($to, $from, $tennguoigui="CNTT-ĐHTL", $tieudethu, $noidungthu, $from, $p, $error);
                 header("Location: register-page-successfully.php");
                 exit();
             }else{

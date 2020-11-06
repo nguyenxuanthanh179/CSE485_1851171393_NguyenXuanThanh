@@ -110,7 +110,7 @@
                             </div>
                         </div>
                         <div class="col-md-8 right">
-                            <div>
+                            <div id="table">
                                 <div class="title"><a href="edit.php?title=<?php echo $row['title']?>" style="color: black;"><?php echo $row['title'] ?></a></div>
                                 <div>đã hỏi lúc <span><?php echo $row['date'] ?></span> trong <a href="#" class=""><?php echo $row['catalogue'] ?></a> bởi <span> <?php echo $row['user'] ?> </span> (560 điểm)</div>
                                 <div class="d-flex tag">
@@ -121,8 +121,7 @@
                                         <a type="submit" onclick="if (!confirm('Bạn có chắc muốn xóa?')) { return false }" href="delete.php?title=<?php echo $row['title']?>" ><i class="fas fa-trash-alt"></i></a>
                                         <a style="padding-left:20px;" href="edit.php?title=<?php echo $row['title']?>"> <i class="fas fa-edit"></i></a>
                                     </div> 
-                                </div>
-                                
+                                </div>     
                             </div>
                         </div>
                         
@@ -138,7 +137,7 @@
           <div class="col-md-4 col-12 right">
                <div class="d-flex search">
                     <div>
-                        <input type="text" name="" id="" placeholder="tìm kiếm">
+                        <input type="text" name="" id="search" placeholder="tìm kiếm">
                     </div>
                     <div>
                         <input type="submit" id="tim" value="Tìm">
