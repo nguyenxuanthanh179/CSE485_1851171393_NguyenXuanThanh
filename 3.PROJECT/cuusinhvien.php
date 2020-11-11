@@ -1,5 +1,5 @@
 <?php
-    include('header.php');
+    include('includes/header.php');
 ?>
 <div style="display:block;height:120px;"></div>
 <div class="container">
@@ -128,5 +128,5 @@
 
 
 <?php
-    include('footer.php');
+    include('includes/footer.php');
 ?>
