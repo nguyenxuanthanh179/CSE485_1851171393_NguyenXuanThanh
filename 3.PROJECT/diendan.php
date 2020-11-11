@@ -83,52 +83,10 @@
                         Câu hỏi và trả lời gần đây
                     </div>
                 </div>
-                <div class="content">
-                    <div class="row content1">
-                                <?php
-                                    $sql = "SELECT * FROM forum";
-                                    $result = mysqli_query($conn,$sql);
-                                    while($row = mysqli_fetch_assoc($result))
-                                    {
-                                ?>
-                        <div class="col-md-4 left">
-                            <div class="d-flex">
-                                <button id="like" class="btn btn-primary">
-                                    <div id="qlt1">0</div>
-                                    <div><i class="fas fa-thumbs-up"></i></div>
-                                </button>
-
-                                <button id="unlike" class="btn btn-danger">
-                                    <div id="qlt2">0</div>
-                                    <div><i class="fas fa-thumbs-down"></i></div>
-                                </button>
-                                    
-                                <button id="answer" class="btn btn-success">
-                                    <div>0</div>
-                                    <div>Trả lời</div>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-md-8 right">
-                            <div id="table">
-                                <div class="title"><a href="edit.php?title=<?php echo $row['title']?>" style="color: black;"><?php echo $row['title'] ?></a></div>
-                                <div>đã hỏi lúc <span><?php echo $row['date'] ?></span> trong <a href="#" class=""><?php echo $row['catalogue'] ?></a> bởi <span> <?php echo $row['user'] ?> </span> (560 điểm)</div>
-                                <div class="d-flex tag">
-                                    <div class="col-md-4">
-                                        <div style="background: orange;"><?php echo $row['tag'] ?></div>
-                                    </div>   
-                                    <div class="col-md-8" style="padding-left: 30%">
-                                        <a type="submit" onclick="if (!confirm('Bạn có chắc muốn xóa?')) { return false }" href="delete.php?title=<?php echo $row['title']?>" ><i class="fas fa-trash-alt"></i></a>
-                                        <a style="padding-left:20px;" href="edit.php?title=<?php echo $row['title']?>"> <i class="fas fa-edit"></i></a>
-                                    </div> 
-                                </div>     
-                            </div>
-                        </div>
-                        
-                                    <?php }
-                                    ?>
-
-                    </div>
+               
+                <div id="result">
+                
+                    
                 </div>
                 <div id=question>
                         Hãy bắt đầu mọi thứ bằng <a href="add.php">một câu hỏi</a>
@@ -137,10 +95,10 @@
           <div class="col-md-4 col-12 right">
                <div class="d-flex search">
                     <div>
-                        <input type="text" name="" id="search" placeholder="tìm kiếm">
+                        <input type="text" name="search_text" id="search_text" placeholder="tìm kiếm">
                     </div>
                     <div>
-                        <input type="submit" id="tim" value="Tìm">
+                        <a href="timkiem.php"><input type="submit" id="tim" value="Tìm"></a>
                     </div>
                </div>
                <div style="margin-top: 15px; font-size:20px;">
@@ -185,11 +143,43 @@
           </div>
           </div>
       </main>
+      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/diendan.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.5.1.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>  
   </body>
 </html>
+<script>
+$(document).ready(function(){
+	load_data();
+	function load_data(query)
+	{
+		$.ajax({
+			url:"search.php",
+			method:"post",
+			data:{query:query},
+			success:function(data)
+			{
+				$('#result').html(data);
+			}
+		});
+	}
+	
+	$('#search_text').keyup(function(){
+		var search = $(this).val();
+		if(search != '')
+		{
+			load_data(search);
+		}
+		else
+		{
+			load_data();			
+		}
+	});
+});
+</script>
