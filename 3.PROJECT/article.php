@@ -75,76 +75,86 @@
             </div>
         </nav>
       </header>
-      <main class="container">
-          <div class="row">
-            <div class="col-md-8 col-12 left">
-                <div class="box1">
-                    <div>
-                        Câu hỏi và trả lời gần đây
-                    </div>
-                </div>
-               
-                <div id="result">
-                
+
+    <div class="container content">
+        <div class="row" >
+            <div class="col-md-12 mt-4">
+                <?php
                     
+                    $query = "SELECT * FROM forum";
+                    $result = mysqli_query($conn,$query);
+                    $row = mysqli_fetch_assoc($result)
+                ?>
+
+                <h3 style="text-align:center;"><?php echo $row['title'] ?></h3>
+                <div class="content">
+                    <?php echo $row['content'] ?>
                 </div>
-                <div id=question>
-                        Hãy bắt đầu mọi thứ bằng <a href="add.php">một câu hỏi</a>
+            </div>   
+        </div>    
+        <hr style="margin-top: 50px;">    
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Bình luận</h5>
+                <form action="" method="post">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <input type="text" name="cmt" placeholder="Viết bình luận" style="width:100%;">
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" name="post">Đăng</button>
+                        </div>
+                    </div>    
+                </form>
+            </div>   
+        </div>
+        <?php 
+         if(isset($_POST['post'])){
+             $cmt = $_POST['cmt'];
+             $query = "INSERT INTO comment (cmt)
+             VALUES ('$cmt')";
+             mysqli_query($conn, $query);
+            }
+        ?>
+
+        <div class="row">
+                <div class="col-md-12 mt-4">
+                        <?php
+                             
+                             $sql = "SELECT * FROM comment";
+                             $result = mysqli_query($conn,$sql);
+                             while($row = mysqli_fetch_assoc($result))
+                                {
+                        ?>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div> <i class="fas fa-user"></i><?php echo $row['user']; ?> - <?php echo $row['date']; ?></div>
+                            <h6 class="mt-2"><?php echo $row['cmt']; ?> </h6>
+                            
+                        </div>
+                        <div class="col-md-3 mt-3">
+                            <button id="like" class="btn btn-classic">
+                                <i class="fas fa-thumbs-up"></i>
+                                <label id="qlt1">0</label>
+                            </button>
+                            <button id="unlike" class="btn btn-classic">
+                                <i class="fas fa-thumbs-down"></i>
+                                <label id="qlt2">0</label>
+                            </button>
+                            <a class="btn btn-classic" type="submit" onclick="if (!confirm('Bạn có chắc muốn xóa?')) { return false }" href="delete_cmt.php?cmt=<?php echo $row['cmt']?>"><i class="fas fa-trash-alt"></i></a>
+                        </div>                      
+                    </div> 
+                    <hr>   
+                        <?php }
+                        ?>
                 </div>
-          </div>
-          <div class="col-md-4 col-12 right">
-               <div class="d-flex search">
-                    <div>
-                        <input type="text" name="search_text" id="search_text" placeholder="tìm kiếm">
-                    </div>
-                    <div>
-                        <a href="search.php"><input type="submit" id="tim" value="Tìm"></a>
-                    </div>
-               </div>
-               <div style="margin-top: 15px; font-size:20px;">
-                   <div class="d-flex" >
-                        <div class="col-md-6 question">
-                            <i class="fa fa-question"></i>
-                            4 câu hỏi
-                        </div>
-                        <div class="col-md-6 answer">
-                        <i class="far fa-comment-alt"></i>
-                            3 trả lời
-                        </div>
-                   </div>
-                   <div class="d-flex">
-                       <div class="col-md-6 cmt">
-                       <i class="far fa-comment"></i>
-                           0 bình luận
-                       </div>
-                       <div class="col-md-6 member">
-                           <i class="fa fa-users"></i>
-                           3 thành viên
-                       </div>
-                   </div>
-               </div>
-               <div class="chuyen-muc">
-                   <div>
-                       <h6>Chuyên mục</h6>
-                   </div>
-                   <div>
-                       <ul>
-                           <li><a href="categories.php" title="">Tất cả chuyên mục </a></li>
-                           <li><a href="#" title="">0. CSE Forum </a><span>(0)</span></li>
-                           <li><a href="#" title="">1.Tin tức - thông báo </a><span>(0)</span></li>
-                           <li><a href="#" title="">2.Tư vấn Tuyển sinh</a> <span>(3)</span></li>
-                           <li><a href="#" title="">3.Đào tạo- Hướng nghiệp</a> <span>(1)</span></li>
-                       </ul>
-                    </div>
-               </div>
-               <div class="bot">
-                   <p>Chào mừng đến với CSE.TLU nơi bạn có thể đặt câu hỏi</p>
-               </div>
-          </div>
-          </div>
-      </main>
-      
-    <!-- Optional JavaScript -->
+        </div>
+    </div>
+
+    
+    
+
+ <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/diendan.js"></script>
@@ -154,32 +164,3 @@
     <script src="js/bootstrap.min.js"></script>  
   </body>
 </html>
-<script>
-$(document).ready(function(){
-	load_data();
-	function load_data(query)
-	{
-		$.ajax({
-			url:"search.php",
-			method:"post",
-			data:{query:query},
-			success:function(data)
-			{
-				$('#result').html(data);
-			}
-		});
-	}
-	
-	$('#search_text').keyup(function(){
-		var search = $(this).val();
-		if(search != '')
-		{
-			load_data(search);
-		}
-		else
-		{
-			load_data();			
-		}
-	});
-});
-</script>

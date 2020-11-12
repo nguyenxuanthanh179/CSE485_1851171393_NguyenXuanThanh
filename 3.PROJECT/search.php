@@ -48,7 +48,7 @@ if(mysqli_num_rows($result) > 0)
                          <div class="col-md-8 right">
                             <div id="table">
                                 <div class="title">
-                                    <a href="edit.php?title= '. $row['title']. ' style="color: black;">'.
+                                    <a href="article.php?title= '. $row['title']. '" . style="color: black;">'.
                                 $row['title'].'</a>
                                 </div>
                                 <div>đã hỏi lúc <span>'. $row['date'].'</span> trong 
@@ -60,7 +60,7 @@ if(mysqli_num_rows($result) > 0)
                                         <div style="background: orange;">'. $row['tag'].'</div>
                                     </div>   
                                     <div class="col-md-8" style="padding-left: 30%">
-                                        <a type="submit" href="delete.php?title='. $row['title'].'" ><i class="fas fa-trash-alt"></i></a>
+                                        <a type="submit"  href="delete.php?title='. $row['title'].'" ><i class="fas fa-trash-alt"></i></a>
                                         <a style="padding-left:20px;" href="edit.php?title='. $row['title'].'"> <i class="fas fa-edit"></i></a>
                                     </div> 
                                 </div>     

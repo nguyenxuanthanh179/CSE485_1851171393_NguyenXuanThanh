@@ -74,9 +74,15 @@
             <form action="" method="post">
                 <div class="row mt-5">
                     <div class="col-md-4 left">
-                        <label>Tiêu đề</label>
+                        <label>Người đăng</label>
                     </div>
                     <div class="col-md-8 right">
+                        <input type="text" name="user">
+                    </div>
+                    <div class="col-md-4 mt-4 left">
+                        <label>Tiêu đề</label>
+                    </div>
+                    <div class="col-md-8 mt-4 right">
                         <input type="text" name="title">
                     </div>
 
@@ -118,13 +124,14 @@
 
         <?php
             if(isset($_POST['add'])){
+                $user = $_POST['user'];
                 $title = $_POST['title'];
                 $content = $_POST['content'];
                 $ctl = $_POST['catalogue'];
                 $tag = $_POST['tag'];
 
-                $query = "INSERT INTO forum (title, content, catalogue, tag)
-                VALUES ('$title', '$content', '$ctl', '$tag')";
+                $query = "INSERT INTO forum (user, title, content, catalogue, tag)
+                VALUES ('$user', '$title', '$content', '$ctl', '$tag')";
                 
                 mysqli_query($conn, $query);
 

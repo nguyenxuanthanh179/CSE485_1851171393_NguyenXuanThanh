@@ -1,13 +1,13 @@
 <?php 
 
-        $ma = $_GET['title'];
+        $ma = $_GET['cmt'];
         $conn = mysqli_connect('localhost','root','','webkhoa');
         if(!$conn){
             die('Khong the ket noi');
         }
-         $sql = "DELETE FROM forum WHERE title = '$ma'";
+         $sql = "DELETE FROM comment WHERE cmt = '$ma'";
         if(mysqli_query($conn,$sql)){
-         header("Location:diendan.php");
+         header("Location:article.php");
         exit();
         }
         else{
@@ -16,4 +16,3 @@
          mysqli_close($conn);
 
 ?>
-
