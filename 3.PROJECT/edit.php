@@ -1,21 +1,19 @@
 <?php
     $ma = $_GET['title'];
-    $conn = mysqli_connect('localhost','root','','webkhoa');
-    if(!$conn){
-        die('Khong the ket noi');
-    }
+    include('includes/config.php');
  
       $sql = "SELECT * FROM forum WHERE title = '$ma'";
       $result = mysqli_query($conn, $sql);
       $row = mysqli_fetch_assoc($result);
 
       if(isset($_POST['edit'])){
+        $user = $_POST['user'];
         $title = $_POST['title'];
         $content = $_POST['content'];
         $ctl = $_POST['catalogue'];
         $tag = $_POST['tag'];
 
-        $query = "UPDATE forum SET title = '$title', content = '$content', catalogue = '$ctl', tag = '$tag' WHERE title = '$ma'";
+        $query = "UPDATE forum SET user = '$user', title = '$title', content = '$content', catalogue = '$ctl', tag = '$tag' WHERE title = '$ma'";
          if(mysqli_query($conn,$query)){
             header("Location:diendan.php");
                exit();
@@ -82,18 +80,24 @@
                 </div>
             <form action="" method="post">
                 <div class="row mt-5">
+                <div class="col-md-4 left">
+                        <label>Người đăng</label>
+                    </div>
+                    <div class="col-md-8 right">
+                        <input type="text" name="user" value="<?php echo $row['user']; ?>">
+                    </div>
                     <div class="col-md-4 left">
                         <label>Tiêu đề</label>
                     </div>
                     <div class="col-md-8 right">
-                        <input type="text" name="title" placeholder="<?php echo $row['title']; ?>">
+                        <input type="text" name="title" value="<?php echo $row['title']; ?>">
                     </div>
 
                     <div class="col-md-4 left">
                         <label class="mt-4">Nội dung</label>
                     </div>
                     <div class="col-md-8 right">
-                        <textarea name="content" class="mt-4" placeholder="<?php echo $row['content']; ?>"></textarea>
+                        <textarea name="content" class="mt-4"><?php echo $row['content']; ?></textarea>
                     </div>
 
                     <div class="col-md-4 left">
@@ -113,7 +117,7 @@
                         <label class="mt-4">Tag</label>
                     </div>
                     <div class="col-md-8 right">
-                        <input type="text" name="tag" class="mt-4" placeholder="<?php echo $row['tag']; ?>">
+                        <input type="text" name="tag" class="mt-4" value="<?php echo $row['tag']; ?>">
                     </div>
                 
 
@@ -127,13 +131,14 @@
 
         <?php
             if(isset($_POST['add'])){
+                $user = $_POST['user'];
                 $title = $_POST['title'];
                 $content = $_POST['content'];
                 $ctl = $_POST['catalogue'];
                 $tag = $_POST['tag'];
 
-                $query = "INSERT INTO forum (title, content, catalogue, tag)
-                VALUES ('$title', '$content', '$ctl', '$tag')";
+                $query = "INSERT INTO forum (user,title, content, catalogue, tag)
+                VALUES ('user','$title', '$content', '$ctl', '$tag')";
                 
                 mysqli_query($conn, $query);
 

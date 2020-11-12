@@ -1,7 +1,18 @@
 <?php
-    $conn = mysqli_connect('localhost','root','','webkhoa');
-    if(!$conn){
-        die('Khong the ket noi');
+    include('includes/config.php');
+    if(isset($_POST['add'])){
+        $user = $_POST['user'];
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+        $ctl = $_POST['catalogue'];
+        $tag = $_POST['tag'];
+
+        $query = "INSERT INTO forum (user, title, content, catalogue, tag)
+        VALUES ('$user', '$title', '$content', '$ctl', '$tag')";
+        
+        mysqli_query($conn, $query);
+
+        header('location: diendan.php');
     }
 ?>
 
@@ -121,23 +132,6 @@
                 </div>
             </form>
         </div>
-
-        <?php
-            if(isset($_POST['add'])){
-                $user = $_POST['user'];
-                $title = $_POST['title'];
-                $content = $_POST['content'];
-                $ctl = $_POST['catalogue'];
-                $tag = $_POST['tag'];
-
-                $query = "INSERT INTO forum (user, title, content, catalogue, tag)
-                VALUES ('$user', '$title', '$content', '$ctl', '$tag')";
-                
-                mysqli_query($conn, $query);
-
-                header('location: diendan.php');
-            }
-        ?>
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
